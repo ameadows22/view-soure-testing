@@ -95,102 +95,50 @@ transform: rotate(12deg);
 </body>
 
 
+</html>
+
+
 
 
 
 <html>
-  <head>
-    <title>Texter - Draw with Words</title>
-    <meta name="description" content="A creative tool that allows you to draw with words.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<title>Break Apart Banner</title>
+        <meta name="description" content="This banner breaks into pieces when you hover over it - reforming when you're not playing with it!">
+	    
+	    <link href='css/style-01.css' media='screen' rel='stylesheet' type='text/css'/>
+	    <script type="text/javascript" src="js/banner.js"></script>   
+	    <script>
+			window.onload = function() {
+	
+				var banner = new Banner();
+				banner.initialize('canvas-banner');
+			
+			}	
+		</script>
+		
+		
+		<script type="text/javascript">
+	  		(function() {
+	    		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    		po.src = 'https://apis.google.com/js/plusone.js';
+	    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  		})();
+		</script>
+		
+	</head>
+	<body>
+		<header>
+			<canvas id="canvas-banner"></canvas>
+		</header>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6742VNR4P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- CSS -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-
-    <!-- JS -->
-    <script type="text/javascript" src="js/libs/dat.gui.min.js"></script>
-    <script type="text/javascript" src="js/texter.js"></script>
-  </head>
-
-  <body>
-    <!-- Header -->
-    <div id="info-tab">
-      <div class="info first">
-        <b>Texter</b> is a little javascript experiment that lets you explore
-        your creativity by drawing with words. This app is an extension of a
-        demo from this <a href="http://generative-gestaltung.de/">book</a>
-        <p>
-          Made by: <a href="https://tholman.com"> Tim Holman </a> -
-          <a
-            href="http://twitter.com/twholman"
-            title="You'll love my tweets, I promise ;)"
-          >
-            @twholman
-          </a>
-        </p>
-      </div>
-      <div class="info">
-        This has been made using <i> Javascript </i> and the HTML5
-        <i> canvas </i> element. You can find the source on
-        <a href="http://github.com/tholman/texter">Github</a>
-       
-          <iframe
-            src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftholman.com%2Fexperiments%2Fhtml5%2Ftexter&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"
-            scrolling="no"
-            frameborder="0"
-            style="
-              border: none;
-              overflow: hidden;
-              width: 107px;
-              height: 21px;
-              margin-bottom: -1px;
-            "
-            allowTransparency="true"
-          ></iframe>
-        </p>
-      </div>
-      <div id="title">Texter</div>
-    </div>
-    <div id="back">
-      <a href="/experiments"> More experiments </a> <span>&lsaquo;</span>
-    </div>
-    <script type="text/javascript" src="js/header.js"></script>
-
-    <!-- APP -->
-    <canvas id="canvas"></canvas>
-    <script>
-      var texter = new Texter();
-      texter.initialize();
-
-      var gui = new dat.GUI();
-      gui
-        .add(texter, "text")
-        .name("Text")
-        .onChange(function () {
-          texter.onTextChange();
-        });
-      gui.add(texter, "minFontSize", 3, 100).name("Minimum Size");
-      gui.add(texter, "maxFontSize", 3, 400).name("Maximum Size");
-      gui.add(texter, "angleDistortion", 0, 2).step(0.1).name("Random Angle");
-      gui
-        .addColor(texter, "textColor")
-        .name("Text Color")
-        .onChange(function (value) {
-          texter.applyNewColor(value);
-        });
-      gui
-        .addColor(texter, "bgColor")
-        .name("Background Color")
-        .onChange(function (value) {
-          texter.setBackground(value);
-        });
-      gui.add(texter, "clear").name("Clear");
-      gui.add(texter, "save").name("Save");
-    </script>
-
-   </body>
-</html>
-
-
+  gtag('config', 'G-Y6742VNR4P');
+</script></body>		
 
 </html>
